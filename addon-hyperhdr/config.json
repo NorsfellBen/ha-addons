@@ -4,10 +4,7 @@
   "slug": "hyperhdr",
   "description": "Open source ambient lighting implementation based on video and audio streams analysis. Includes real-time HDR tone mapping and multi-threading.",
   "url": "https://github.com/awawa-dev/HyperHDR",
-  "arch": [
-    "amd64",
-    "aarch64"
-  ],
+  "arch": ["amd64", "aarch64"],
   "startup": "application",
   "apparmor": false,
   "boot": "auto",
@@ -17,7 +14,8 @@
     "19333/tcp": 19333,
     "19400/tcp": 19400,
     "19444/tcp": 19444,
-    "19445/tcp": 19445
+    "19445/tcp": 19445,
+    "1900/tcp": 1900
   },
   "ports_description": {
     "8090/tcp": "Web Admin",
@@ -25,18 +23,14 @@
     "19333/tcp": "Boblight Server",
     "19400/tcp": "Google Flatbuffers Receiver",
     "19444/tcp": "JSON-RPC Remote Control",
-    "19445/tcp": "Protocol Buffers Server"
+    "19445/tcp": "Protocol Buffers Server",
+    "1900/tcp": "SSDP"
   },
-  "map": [
-    "config:rw"
-  ],
+  "map": ["config:rw"],
   "image": "noname93d/hyperhdr-addon-{arch}",
   "options": {},
   "schema": {},
-  "privileged": [
-    "SYS_ADMIN",
-    "SYS_RAWIO"
-  ],
+  "privileged": ["SYS_ADMIN", "SYS_RAWIO"],
   "uart": true,
   "udev": true,
   "usb": true,
