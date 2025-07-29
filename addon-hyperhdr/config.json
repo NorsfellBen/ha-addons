@@ -1,10 +1,13 @@
 {
   "name": "HyperHDR",
-  "version": "21.0.0.1",
+  "version": "21.0.0.0",
   "slug": "hyperhdr",
   "description": "Open source ambient lighting implementation based on video and audio streams analysis. Includes real-time HDR tone mapping and multi-threading.",
   "url": "https://github.com/awawa-dev/HyperHDR",
-  "arch": ["amd64", "aarch64"],
+  "arch": [
+    "amd64",
+    "aarch64"
+  ],
   "startup": "application",
   "apparmor": false,
   "boot": "auto",
@@ -27,11 +30,16 @@
     "19445/tcp": "Protocol Buffers Server",
     "1900/udp": "SSDP"
   },
-  "map": ["config:rw"],
+  "map": [
+    "config:rw"
+  ],
   "image": "iddenoo/hyperhdr-addon-{arch}",
   "options": {},
   "schema": {},
-  "privileged": ["SYS_ADMIN", "SYS_RAWIO"],
+  "privileged": [
+    "SYS_ADMIN",
+    "SYS_RAWIO"
+  ],
   "uart": true,
   "udev": true,
   "usb": true,
