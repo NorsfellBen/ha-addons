@@ -8,6 +8,7 @@
   "startup": "application",
   "apparmor": false,
   "boot": "auto",
+  "host_network": true,
   "ports": {
     "8090/tcp": 8090,
     "8092/tcp": null,
@@ -15,7 +16,7 @@
     "19400/tcp": 19400,
     "19444/tcp": 19444,
     "19445/tcp": 19445,
-    "1900/tcp": 1900
+    "1900/udp": 1900
   },
   "ports_description": {
     "8090/tcp": "Web Admin",
@@ -24,7 +25,7 @@
     "19400/tcp": "Google Flatbuffers Receiver",
     "19444/tcp": "JSON-RPC Remote Control",
     "19445/tcp": "Protocol Buffers Server",
-    "1900/tcp": "SSDP"
+    "1900/udp": "SSDP"
   },
   "map": ["config:rw"],
   "image": "iddenoo/hyperhdr-addon-{arch}",
