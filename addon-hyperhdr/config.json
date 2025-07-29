@@ -27,7 +27,7 @@
     "1900/tcp": "SSDP"
   },
   "map": ["config:rw"],
-  "image": "NorsfellBen/hyperhdr-addon-{arch}",
+  "image": "iddenoo/hyperhdr-addon-{arch}",
   "options": {},
   "schema": {},
   "privileged": ["SYS_ADMIN", "SYS_RAWIO"],
