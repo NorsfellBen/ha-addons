@@ -21,6 +21,6 @@ RUN chmod a+x /run.sh
 RUN wget -q "${DOWNLOAD_URL}/v${BUILD_VERSION}/HyperHDR-${BUILD_VERSION}-Linux-$(uname -m).tar.gz" -O - | tar -xvz -C /usr
 
 VOLUME /config
-EXPOSE 8090 8092 19333 19400 19444 19445
+EXPOSE 8090 8092 19333 19400 19444 19445 1900
 RUN echo 'Running webUI on port 8090. Port 19444-19445 exposed for json, protobuffer server (screen-cap)'
 CMD [ "/run.sh" ]
